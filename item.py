@@ -15,5 +15,4 @@ class Item():
 #Items
 S_Heal_ptn = Item("Small Heal Potion",20,0,1,"A small healing potion. Restores 20 health",True)
 L_Heal_ptn = Item("Large Heal Potion",50,0,2,"A Large healing potion. Restores 50 health",True)
-
 sp_ptn = Item("Small SP Potion",0,20,1,"A small SP potion, Restores 20 SP",True)
