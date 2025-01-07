@@ -1,5 +1,5 @@
 import time
-from item import Weapon
+
 
 class Fight:
     def player_atk(playr_inst,opp_inst):

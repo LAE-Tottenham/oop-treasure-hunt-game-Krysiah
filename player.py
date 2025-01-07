@@ -1,5 +1,4 @@
 from item import Weapon
-from healthbar import Healthbar
 
 hands = Weapon("these Hands!",True,16,"You pray that your enemies like Pokemon, cause they're gonna Catch 'Em All!")
 
@@ -14,7 +13,6 @@ class Player:
         self.inventory = []
         
         self.hp_dmg = hands.hp_dmg
-        self.health = Healthbar(self,self.max_health,True,"blue")
 
     def calculate_inventory_size(self,item_instance):
         total_weight = sum(self.inventory(item_instance.weight))

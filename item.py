@@ -24,6 +24,6 @@ class Weapon(Item):
 
 
 
-
 sword = Weapon("Basic Sword",True,10,"A sturdy (and lame looking) sword. Nothing special, but good at slaying enemies.")
 hands = Weapon("these Hands!",True,16,"You pray that your enemies like Pokemon, cause they're gonna Catch 'Em All!")
+claw = Weapon("Scratch",True,4,"A simple scratch. Doesn't hurt much, but it's the attack that counts...")
