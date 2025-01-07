@@ -1,10 +1,6 @@
-class Item():
-    def __init__(self, name, health_pts, sp_pts, weight, desc, can_use=False):
+class Item:
+    def __init__(self, name,can_use,desc):
         self.name = name
-        self.weight = 0
-        self.health_pts = health_pts
-        self.sp_pts = sp_pts
-        self.weight = weight
         self.can_use = can_use
         self.desc = desc
 
@@ -12,7 +8,22 @@ class Item():
         print(self.name,"""
 ""","[",self.desc,"]")
 
-#Items
-S_Heal_ptn = Item("Small Heal Potion",20,0,1,"A small healing potion. Restores 20 health",True)
-L_Heal_ptn = Item("Large Heal Potion",50,0,2,"A Large healing potion. Restores 50 health",True)
-S_sp_ptn = Item("Small SP Potion",0,20,1,"A small SP potion, Restores 20 SP",True)
+#Battle Items
+class Battle_Item(Item):
+    def __init__(self, name,can_use,desc,health_pts,sp_pts,weight):
+        super().__init__(name,can_use,desc)
+        self.health_pts = health_pts
+        self.sp_pts = sp_pts
+        self.weight = weight
+
+ #Weapons   
+class Weapon(Item):
+    def __init__(self, name, can_use, hp_dmg, desc):
+        super().__init__(name, can_use, desc)
+        self.hp_dmg = hp_dmg
+
+
+
+
+sword = Weapon("Basic Sword",True,10,"A sturdy (and lame looking) sword. Nothing special, but good at slaying enemies.")
+hands = Weapon("these Hands!",True,16,"You pray that your enemies like Pokemon, cause they're gonna Catch 'Em All!")

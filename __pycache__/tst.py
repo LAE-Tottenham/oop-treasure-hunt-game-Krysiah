@@ -1,9 +1,9 @@
-from player import Player
-from summon import Summmon
+from player import Player 
 from enemy import Enemy
 from fight import Fight
 
-protag = Player("Kryssi")
+
+protag = Player(given_name="Kryssi")
 opp1 = Enemy("Possessed Skull",50,6,0)
 
 while True:
