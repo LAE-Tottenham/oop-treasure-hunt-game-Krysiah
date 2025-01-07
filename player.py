@@ -3,6 +3,7 @@ class Player():
         self.name = given_name
         self.health = 100
         self.sp = 100
+        self.hp_dmg = 5
         self.inventory_max_weight = 50
         self.inventory = []
         
@@ -23,6 +24,3 @@ class Player():
         else:
             print("This item cannot be used")
         
-
-    def use_summon(self, sum_instance):
-        if self.sp - sum_instance.sp_cost  

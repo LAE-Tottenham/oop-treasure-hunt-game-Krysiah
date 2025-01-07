@@ -1,6 +1,8 @@
 from place import Place
 from player import Player
 from item import Item
+from fight import Fight
+
 
 class Game():
     def __init__(self):
@@ -24,11 +26,12 @@ class Game():
         # etc. 
         
         # items
-        hammer = Item('Hammer')
-        pen = Item('Pen')
+        S_Heal_ptn = Item("Small Heal Potion",20,0,1,"A small healing potion. Restores 20 health",True)
+        L_Heal_ptn = Item("Large Heal Potion",50,0,2,"A Large healing potion. Restores 50 health",True)
+        S_sp_ptn = Item("Small SP Potion",0,20,1,"A small SP potion, Restores 20 SP",True)
 
-        home.add_item(hammer)
-        bedroom.add_item(pen)
+        #home.add_item(hammer)
+        #bedroom.add_item(pen)
 
         # home will be our starting place
         self.current_place = home
@@ -39,7 +42,7 @@ class Game():
         print("Welcome to my game...")
         print("Storyline...")
         name = input("Enter player name: ")
-        player = Player(name)
+        player = Player()
 
         print("You are currently in " + self.current_place.name)
         self.current_place.show_next_places()
