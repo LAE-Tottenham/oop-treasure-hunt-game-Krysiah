@@ -1,12 +1,11 @@
 class Player():
-    def __init__(self, given_name, skill):
+    def __init__(self, given_name):
         self.name = given_name
         self.health = 100
         self.sp = 100
         self.inventory_max_weight = 50
         self.inventory = []
-        self.skill = skill
-    
+        
     def calculate_inventory_size(self,item_instance):
         total_weight = sum(self.inventory(item_instance.weight))
         return total_weight
@@ -25,5 +24,5 @@ class Player():
             print("This item cannot be used")
         
 
-
-    # add more methods as needed
+    def use_summon(self, sum_instance):
+        if self.sp - sum_instance.sp_cost  
