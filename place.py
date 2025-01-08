@@ -19,6 +19,7 @@ class Place():
         print("The possible places you can go to are: ")
         for place in self.next_places:
             # remember that next_places is a list of Place instances hence why we can use place.name
+            
             print(place.name)
 
     # add more methods as needed

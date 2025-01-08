@@ -10,20 +10,24 @@ class Item:
 
 #Battle Items
 class Battle_Item(Item):
-    def __init__(self, name,can_use,desc,health_pts,sp_pts,weight):
-        super().__init__(name,can_use,desc)
+    def __init__(self, name,type,desc,health_pts,sp_pts,weight):
+        super().__init__(name,type,desc)
         self.health_pts = health_pts
         self.sp_pts = sp_pts
         self.weight = weight
 
  #Weapons   
 class Weapon(Item):
-    def __init__(self, name, can_use, hp_dmg, desc):
-        super().__init__(name, can_use, desc)
+    def __init__(self, name, type, hp_dmg, desc):
+        super().__init__(name, type, desc)
         self.hp_dmg = hp_dmg
 
+#Key Items
+class Key_Item(Item):
+    def __init__(self, name, type, desc):
+        super().__init__(name, type, desc)
+        self.can_use = False
 
-
-sword = Weapon("Basic Sword",True,10,"A sturdy (and lame looking) sword. Nothing special, but good at slaying enemies.")
-hands = Weapon("these Hands!",True,16,"You pray that your enemies like Pokemon, cause they're gonna Catch 'Em All!")
-claw = Weapon("Scratch",True,4,"A simple scratch. Doesn't hurt much, but it's the attack that counts...")
+sword = Weapon("Basic Sword","weapon",10,"A sturdy (and lame looking) sword. Nothing special, but good at slaying enemies.")
+hands = Weapon("these Hands!","weapon",16,"You pray that your enemies like Pokemon, cause they're gonna Catch 'Em All!")
+claw = Weapon("Scratch",True,"weapon","A simple scratch. Doesn't hurt much, but it's the attack that counts...")
